@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "homepage": "https://rorystaehelin.github.io/CS4227-Assignment2",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
