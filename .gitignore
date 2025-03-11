@@ -4,3 +4,4 @@ backend/.gitattributes
 backend/.gradle 
 backend/.project 
 backend/.settings
+backend/build/
