@@ -1,23 +1,19 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import CreateProject from "./pages/CreateProject";
-import About from "./pages/About";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import DashboardPage from "./pages/DashboardPage";
+import ProjectDetail from "./components/ProjectDetail";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <div className="container" style={{ padding: "20px" }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/create-project" element={<CreateProject />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </div>
+    <div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/projects/:id" element={<ProjectDetail />} />
+      </Routes>
     </div>
   );
 }
