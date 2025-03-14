@@ -1,15 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import LoginForm from "../components/LoginForm";
 
-function HomePage() {
+function LoginPage() {
   return (
     <div>
-      <h1>Welcome to the Research Management System</h1>
-      <p>
-        Please <Link to="/login">login</Link> to access the dashboard.
-      </p>
+      <h2>Login</h2>
+      <LoginForm />
     </div>
   );
 }
 
-export default HomePage;
+export default LoginPage;
