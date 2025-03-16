@@ -1,14 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Layout from "../components/Layout";
 
 function HomePage() {
   return (
-    <div>
-      <h1>Welcome to the Research Management System</h1>
-      <p>
-        Please <Link to="/login">login</Link> to access the dashboard.
-      </p>
-    </div>
+    <Layout>
+      <article className="contrast">
+        <h1>Welcome to the Research Management System</h1>
+        <p>
+          Please <a href="#/login">login</a> to access the dashboard.
+        </p>
+      </article>
+    </Layout>
   );
 }
 
