@@ -1,9 +1,7 @@
-import React from "react";
-
 function Layout({ children }) {
   return (
     <>
-      <header>
+      <header className="container" style={{ marginTop: "1rem" }}>
         <nav>
           <ul>
             <li>
@@ -18,8 +16,12 @@ function Layout({ children }) {
           </ul>
         </nav>
       </header>
-      <main className="container">{children}</main>
-      <footer>
+
+      <main className="container" style={{ marginTop: "2rem" }}>
+        {children}
+      </main>
+
+      <footer className="container" style={{ marginTop: "2rem" }}>
         <p>&copy; 2025 University Research Center</p>
       </footer>
     </>

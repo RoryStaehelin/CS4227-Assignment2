@@ -4,6 +4,7 @@ import { loadProjects } from "../redux/slices/projectSlice";
 import ProjectList from "../components/ProjectList";
 import AdminPanel from "../components/AdminPanel";
 import { useNavigate } from "react-router-dom";
+import Layout from "../components/Layout";
 
 function DashboardPage() {
   const dispatch = useDispatch();
@@ -19,15 +20,17 @@ function DashboardPage() {
   }, [dispatch, user.currentUser, navigate]);
 
   return (
-    <div>
-      <h2>Dashboard</h2>
-      <p>Welcome, {user.currentUser}</p>
-      {user.role === "admin" && <AdminPanel />}
-      <ProjectList
-        projects={projectsState.items}
-        loading={projectsState.loading}
-      />
-    </div>
+    <Layout>
+      <article className="contrast">
+        <h2>Dashboard</h2>
+        <p>Welcome, {user.currentUser}</p>
+        {user.role === "admin" && <AdminPanel />}
+        <ProjectList
+          projects={projectsState.items}
+          loading={projectsState.loading}
+        />
+      </article>
+    </Layout>
   );
 }
 
